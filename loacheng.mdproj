@@ -1,0 +1,26 @@
+﻿{
+  "ActiveFolder": "loachengineering",
+  "ActiveSidebarIndex": 0,
+  "PreviewWebRootPath": "loachengineering",
+  "Configuration": null,
+  "OpenDocuments": [
+    {
+      "Filename": "_config.yml",
+      "IsActive": false,
+      "LastEditorLineNumber": 23,
+      "LastImageFolder": null
+    },
+    {
+      "Filename": "about.markdown",
+      "IsActive": true,
+      "LastEditorLineNumber": 31,
+      "LastImageFolder": null
+    },
+    {
+      "Filename": "categories.md",
+      "IsActive": false,
+      "LastEditorLineNumber": 4,
+      "LastImageFolder": null
+    }
+  ]
+}

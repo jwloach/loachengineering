@@ -1,0 +1,204 @@
+/* -------------------------------------------------------------------------
+*   Krypton Blog HUGO for ThemeForest
+*   Stylesheet | Blog Cards
+*   @author RedSparrow Themes
+*   @version 1.0.0
+* ------------------------------------------------------------------------ */
+.blog-card-single-layout {
+	margin-top: 40px;
+	.blog-card-single {
+		text-align: center;
+		margin-bottom: 70px;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+				text-decoration-color: #333;
+			}
+		}
+		&-title {
+			font-size: 32px;
+			line-height: 140%;
+		}
+		&-details {
+			font-size: 14px;
+			.date-posted {
+				border-bottom: 1px dashed #555;
+			}
+			.category-list {
+				color: $theme-color;
+				text-decoration: none;
+			}
+		}
+		&-intro {
+			text-align: left;
+			margin-bottom: 26px;
+			font-size: 17px;
+			line-height: 170%;
+		}
+		&-image {
+			height: 260px;
+			border-radius: 2px;
+		}
+	}
+}
+
+.blog-card-list-layout {
+	margin-top: 40px;
+	.blog-card-list-single {
+		display: flex;
+		margin-bottom: 20px;
+		flex-direction: column;
+		&-content {
+			padding-left: 0;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+				text-decoration-color: #333;
+			}
+		}
+		&-title {
+			font-size: 24px;
+			line-height: 140%;
+			text-transform: none;
+			text-align: center;
+		}
+		&-details {
+			font-size: 14px;
+			.date-posted {
+				border-bottom: 1px dashed #555;
+			}
+			.category-list {
+				color: $theme-color;
+				text-decoration: none;
+			}
+		}
+		&-intro {
+			text-align: left;
+			margin-bottom: 26px;
+			font-size: 14px;
+			line-height: 170%;
+		}
+		&-image {
+			height: 120px;
+			flex-basis: 150px;
+			flex-shrink: 0;
+			border-radius: 2px;
+		}
+	}
+}
+
+.pagination-wrapper {
+	margin: 30px 0;
+	.pagination {
+		justify-content: center;
+		.page-item {
+			display: flex;
+			border: 1px solid $theme-color;
+			border-radius: 5px;
+			.page-link-alt {
+				padding: 10px 30px;
+				color: #333;
+				border-right: 1px solid $theme-color;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				&.no-hover {
+					&:hover {
+						background: transparent;
+					}
+				}
+				&.b-none {
+					border-right: none;
+					border-top-right-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+				&:hover {
+					background: #fff9ec;
+				}
+				&.disabled {
+					background: #f2f2f2;
+					&:hover {
+						cursor: not-allowed;
+					}
+				}
+			}
+			&.active {
+				.page-link {
+					background: $theme-color;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.category-card {
+	border: 1px solid #cbcbcb;
+	border-radius: 2px;
+	margin-bottom: 30px;
+	padding: 14px;
+	text-align: center;
+	transition: 300ms ease;
+	&:hover {
+		background: lighten(#dab768, 30%);
+		border: 1px solid $theme-color;
+	}
+	&-title {
+		font-family: $primary-font;
+		color: $primary-text-color;
+		font-size: 18px;
+		transition: 300ms ease;
+		&:hover {
+			color: $primary-text-color;
+		}
+	}
+	&-post-count {
+		text-align: right;
+	}
+}
+
+.category-link {
+	color: #555;
+	text-decoration: none;
+	transition: 300ms ease;
+	&:hover {
+		color: #333;
+		text-decoration: underline;
+	}
+}
+
+.blog-page {
+	.inner-container {
+		.blog-page-title {
+			text-align: center;
+			text-transform: none;
+			margin-bottom: 20px;
+			font-size: 28px;
+		}
+		.category-badge {
+			color: $theme-color;
+			text-decoration: none;
+			transition: 300ms ease;
+			&:hover {
+				text-decoration: underline;
+				color: darken(#dab768, 5%);
+			}
+		}
+	}
+}
+
+.footer-page-nav {
+	background: #f2f2f2;
+	padding: 20px;
+	.blog-nav-items {
+		font-family: $primary-font;
+		font-size: 18px;
+		color: $primary-text-color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

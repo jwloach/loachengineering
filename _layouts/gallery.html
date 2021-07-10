@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="page-name-holder">
+    <span>{{ page.title }}</span>
+</div>
+<div class="row">
+    {% for image in site.data.gallery %}    
+        <div class="col-md-4 ">
+            <a class="gallery-img" href="{{ image.imagePath}}" title="{{ image.caption}}"><img src="{{ image.imagePath}}" alt="{{ image.category}}" class="img-fluid" /></a>
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+window.onload = function() {
+    new SimpleLightbox({elements: '.gallery-img'});
+}
+</script>

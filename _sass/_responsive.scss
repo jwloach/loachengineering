@@ -1,0 +1,127 @@
+/* -------------------------------------------------------------------------
+*   Krypton Blog HUGO for ThemeForest
+*   Stylesheet | Responsive
+*   @author RedSparrow Themes
+*   @version 1.0.0
+* ------------------------------------------------------------------------ */
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.pagination-wrapper {
+		.pagination {
+			.page-item {
+				.page-link-alt {
+					padding: 10px 50px;
+				}
+			}
+		}
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	body {
+		height: 100vh;
+	}
+	.main-content-holder {
+		.page-image-holder {
+			display: block;
+		}
+		.page-content-holder {
+			overflow-y: auto;
+			&-inner {
+				padding: 30px 80px;
+			}
+		}
+	}
+	.mobile-banner {
+		display: none;
+	}
+
+	.mobile-copyright {
+		display: none;
+	}
+	.contact-us-form {
+		width: 80%;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.blog-card-list-layout {
+		.blog-card-list-single {
+			margin-bottom: 50px;
+			flex-direction: row;
+			&-content {
+				padding-left: 30px;
+			}
+			&-title {
+				font-size: 30px;
+				text-align: left;
+			}
+			&-details {
+				font-size: 14px;
+			}
+			&-intro {
+				font-size: 17px;
+			}
+			&-image {
+				height: 220px;
+				flex-basis: 300px;
+			}
+		}
+	}
+	.navbar-custom {
+		.navbar-collapse {
+			.navbar-nav {
+				.nav-item {
+					&:after {
+						content: "";
+						display: block;
+						height: 6px;
+						width: 6px;
+						border-radius: 10px;
+						background: $theme-color;
+						position: absolute;
+						top: 16px;
+						right: -2px;
+					}
+					.nav-link {
+						margin: 0 11px;
+						&:before {
+							content: "";
+							display: block;
+							height: 2px;
+							width: 0;
+							position: absolute;
+							background: $theme-color;
+							top: 34px;
+							left: 0;
+							right: 0;
+							margin: 0 auto;
+							transition: 500ms ease;
+						}
+						&:hover {
+							&:before {
+								width: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.blog-page {
+        .inner-container {
+            .blog-page-title {font-size: 44px;}    
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

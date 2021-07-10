@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="page-name-holder">
+    <span>{{ page.title }}</span>
+</div>
+<div class="blog-card-list-layout">
+    {% for post in paginator.posts %}
+    <div class="blog-card-list-single">
+        <div class="blog-card-list-single-image"
+            style="background:url('{{ post.image | relURL}}') center center; background-size:cover;">
+        </div>
+        <div class="blog-card-list-single-content">
+            <a href="{{ post.url }}">
+                <h1 class="blog-card-list-single-title">{{ post.title }}</h1>
+            </a>
+            <p class="blog-card-list-single-details">Posted on <span class="date-posted">{{ post.date | date: '%B %d,
+                    %Y' }}</span> in
+
+                {% if post %}
+                {% assign categories = post.categories %}
+                {% else %}
+                {% assign categories = page.categories %}
+                {% endif %}
+                {% for category in categories %}
+                <a class="category-list" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+                {% unless forloop.last %}&nbsp;{% endunless %}
+                {% endfor %}
+            </p>
+            <div class="blog-card-list-single-intro">{{ post.content | truncatewords: 25 }}</div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="pagination-wrapper">
+        <!-- Pagination links -->
+        <div class="pagination">
+            <div class="page-item">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="page-link-alt">
+                    Previous
+                </a>
+                {% else %}
+                <span class="page-link-alt disabled">Previous</span>
+                {% endif %}
+                <span class="page-link-alt no-hover">
+                    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                </span>
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="page-link-alt b-none">Next</a>
+                {% else %}
+                <span class="page-link-alt disabled  b-none">Next</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

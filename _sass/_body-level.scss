@@ -1,0 +1,52 @@
+/* -------------------------------------------------------------------------
+*   Krypton Blog HUGO for ThemeForest
+*   Stylesheet | Body Level
+*   @author RedSparrow Themes
+*   @version 1.0.0
+* ------------------------------------------------------------------------ */
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: $secondary-font;
+	color: $secondary-text-color;
+	height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $primary-font;
+	color: $primary-text-color;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.page-content {
+	line-height: 170%;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-align: center;
+	}
+	/*img {
+		width: 100%;
+	}*/
+}
+
+.gallery-img {
+	margin-bottom: 30px;
+	display: block;
+}
+
+.mobile-copyright {
+	display: block;
+	font-size: 13px;
+	text-align: center;
+}

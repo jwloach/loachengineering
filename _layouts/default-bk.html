@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+{% include header.html %}
+
+<body>
+    <div class="main-content-holder">
+        <div class="page-image-holder"
+            style="background:url('{{ page.image | relative_url }}') center center; background-size:cover;"
+            data-aos="zoom-in">
+            <div class="overlay-holder">
+                <div class="project-details">
+                    <img src="/assets/images/LoachEngLogo500x500.png" alt="logo" width="100px">
+                    <h1 class="project-details-title">{{ site.title }}</h1>
+                    <span class="project-details-subtitle">Science, engineering and math can be fun.</span>
+                </div>
+                <div class="copyright">
+                    <p>Copyright © {{ "today" | date: "%Y" }}. <a rel="noopener" href="https://loacheng.on.ca"
+                            target="_blank">Loach Engineering Inc.</a>. All Rights Reserved</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="page-content-holder">
+            {% include navbar.html %}
+            <div class="mobile-banner"
+                style="background:url('{{ page.image | relative_url}}') center center; background-size:cover;"
+                data-aos="zoom-in">
+                <div class="overlay-holder">
+                    <div class="project-details">
+                        <img src="/assets/images/logo.png" alt="logo" width="50px">
+                        <h1 class="project-details-title">{{ site.title }}</h1>
+                        <span class="project-details-subtitle">A minimal blog created with Love in Jekyll</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="page-content-holder-inner" data-aos="fade-up">
+                <div class="page-content">
+                    {{ content }}
+                </div>
+            </div>
+            <div class="mobile-copyright">
+                <p>Copyright © {{ "today" | date: "%Y" }}. <a rel="noopener" href="https://redsparrowthemes.com"
+                        target="_blank">Red Sparrow Themes</a>. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+{% include all-scripts.html %}
+
+</html>
